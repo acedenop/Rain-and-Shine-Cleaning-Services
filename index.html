@@ -26,4 +26,29 @@
         <h2>Our Services</h2>
         <p>We provide high-quality house cleaning services in Tacoma, WA.</p>
     </section>
+
+    <section id="cost-calculator">
+        <h2>Cost Calculator</h2>
+        <p>Select services to calculate your total:</p>
+        <div class="services-list">
+            <div class="service">
+                <p>Basic Cleaning - $50</p>
+                <button class="add-service" data-price="50">Add</button>
+            </div>
+            <div class="service">
+                <p>Deep Cleaning - $100</p>
+                <button class="add-service" data-price="100">Add</button>
+            </div>
+            <div class="service">
+                <p>Move-out Cleaning - $150</p>
+                <button class="add-service" data-price="150">Add</button>
+            </div>
+        </div>
+        <p>Subtotal: $<span id="subtotal">0</span></p>
+        <p>Tax (10%): $<span id="tax">0</span></p>
+        <p>Shipping: $<span id="shipping">10</span></p>
+        <p><strong>Total: $<span id="total">0</span></strong></p>
+        <button id="checkout">Checkout</button>
+        <p id="checkout-message"></p>
+    </section>
 </body>
