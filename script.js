@@ -1,8 +1,31 @@
-"use strict"
+"use strict";
+
 
 document.getElementById("theme-toggle").addEventListener("click", function() {
     document.body.classList.toggle("dark-mode");
+    document.querySelector("nav").classList.toggle("dark-mode");
+    document.querySelector("footer").classList.toggle("dark-mode");
+    document.querySelectorAll("button").forEach(button => button.classList.toggle("dark-mode"));
+    document.querySelectorAll("input, textarea").forEach(element => element.classList.toggle("dark-mode"));
+    
+
+    const currentTheme = document.body.classList.contains("dark-mode") ? "dark" : "light";
+    localStorage.setItem("theme", currentTheme);
 });
+
+
+window.addEventListener("load", function() {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+        document.body.classList.add("dark-mode");
+        document.querySelector("nav").classList.add("dark-mode");
+        document.querySelector("footer").classList.add("dark-mode");
+        document.querySelectorAll("button").forEach(button => button.classList.add("dark-mode"));
+        document.querySelectorAll("input, textarea").forEach(element => element.classList.add("dark-mode"));
+    }
+});
+
+
 
 let subtotal = 0;
 const taxRate = 0.10;

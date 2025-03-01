@@ -92,6 +92,39 @@ nav ul li a {
     color: black;
 }
 
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+nav.dark-mode {
+    background-color: #333;
+}
+
+nav.dark-mode ul li a {
+    color: white;
+}
+
+#theme-toggle.dark-mode {
+    background-color: #444;
+    color: white;
+}
+
+button.dark-mode {
+    background-color: #444;
+    color: white;
+}
+
+input, textarea {
+    background-color: #333;
+    color: white;
+    border: 1px solid #444;
+}
+
+footer.dark-mode {
+    background-color: #333;
+    color: white;
+}
 
 #theme-toggle {
     background-color: #4E6E88;
@@ -103,7 +136,6 @@ nav ul li a {
     text-transform: lowercase;
     font-weight: 200;
 }
-
 
 .landing-banner {
     background-image: url(images/AdobeStock_309846739.jpeg);
@@ -128,23 +160,52 @@ nav ul li a {
 
 .banner-content p{
     font-size: 2em;
+    font-weight: 200;
     color: #fff;
     padding-top: 50px;
     font-style: italic;
 }
 
 section {
-    padding: 20px;
+    padding: 30px;
 }
 
-#services, #contact {
-    background-color: #dbe9f4;
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.services-container h2 {
+    font-weight: 600;
+    font-size: 3em;
+    color: #333;
+}
+
+.services-container p {
+    font-size: 1.5em;
+    font-weight: 200;
+    color: #333;
+    padding-top: 25px;
 }
 
 #cost-calculator {
-    background-color: #dbe9f4;
     text-align: center;
 }
+
+.cost-calculator h2 {
+    font-weight: 500;
+    font-size: 3em;
+    color: #333;
+}
+
+.cost-calculator p {
+    font-weight: 200;
+    font-size: 1.5em;
+    color: #333;
+    padding: 20px;
+}
+
 
 .services-list {
     display: flex;
@@ -179,10 +240,16 @@ section {
     cursor: pointer;
 }
 
-form {
+#contact h2{
+    font-weight: 600;
+    font-size: 3em;
+    color: #333;
+    margin-bottom: 1em;
+}
+
+.contact-form {
     display: flex;
     flex-direction: column;
-    max-width: 300px;
     margin: auto;
 }
 
@@ -192,6 +259,8 @@ input, textarea {
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 button[type="submit"] {
@@ -201,6 +270,11 @@ button[type="submit"] {
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
+}
+
+button.dark-mode {
+    background-color: #777;
+    color: #333;
 }
 
 
